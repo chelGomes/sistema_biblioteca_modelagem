@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:sb.db</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <mapping class="ufjf.dcc025.sistema.biblioteca.entities.Aluno" />
+        <mapping class="ufjf.dcc025.sistema.biblioteca.entities.Emprestimo" />
+        <mapping class="ufjf.dcc025.sistema.biblioteca.entities.Exemplar" />
+        <mapping class="ufjf.dcc025.sistema.biblioteca.entities.Funcionario" />
+        <mapping class="ufjf.dcc025.sistema.biblioteca.entities.Livro" />
+        <mapping class="ufjf.dcc025.sistema.biblioteca.entities.Aluno" />
+        <mapping class="ufjf.dcc025.sistema.biblioteca.entities.Usuario" />
+    </session-factory>
+</hibernate-configuration>
